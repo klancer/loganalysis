@@ -1,6 +1,6 @@
-#Log Analysis Project
+# Log Analysis Project
 
-##1. Purpose:
+## 1. Purpose:
 Build an internal reporting tool for a newspaper website that determines what kinds of articles the site's readers like.
 
 Use SQL and python program to report the following:
@@ -9,7 +9,7 @@ Use SQL and python program to report the following:
 3. On which days did more than 1% of requests lead to errors?
 This project is part of the Udacity Full Stack Web Developer Nanodegree.
 
-##2. Technologies Used:
+## 2. Technologies Used:
 SQL
 Python
 Vagrant
@@ -22,7 +22,7 @@ The articles table includes information about news articles and their contents.
 The authors table includes information about the authors of articles.
 The log table includes one entry for each time a user has accessed the news sit
 
-##3. ===Views required for the program:===
+## 3. ===Views required for the program:===
 
 create view slugname as select slug,title,name from articles,authors where articles.author=authors.id;
 
@@ -42,7 +42,7 @@ create view dateoknotfound as select cntnotfounddate.date,cntok,cntnotfound from
 
 create view httpratio as select date, (1.0*cntnotfound/cntok)*100  as result from dateoknotfound;
 
-##4. Operation:
+## 4. Operation:
 Create above views in the database, and run "python3 newsdb.py" to see the report.
 
 
